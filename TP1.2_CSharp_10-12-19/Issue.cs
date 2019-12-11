@@ -29,7 +29,9 @@ namespace TP1._2_CSharp_10_12_19
 
         public void SeDecrire()
         {
-
+            Console.WriteLine("State of the issue: {0} ", etat);
+            Console.WriteLine("Beginning of the issue: {0}", depart.nom);
+            Console.WriteLine("Endpoint of the issue: {0}", arrivee.nom);
         }
     }
 }

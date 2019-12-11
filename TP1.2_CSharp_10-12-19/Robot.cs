@@ -13,13 +13,21 @@ namespace TP1._2_CSharp_10_12_19
         private Sac sac;
 
         public Robot()
-        {
+        { 
             sac = new Sac();
         }
 
         public void AllerVers(int destination)
         {
 
+            if (destination > seTrouveDans.issueList.Count)
+                Console.WriteLine("Unknown location");
+            else
+            {
+                destination--;
+                seTrouveDans = ((Issue)seTrouveDans.issueList[destination]).arrivee;
+            }
+            
         }
 
         private void DecrireMateriel()
@@ -34,8 +42,10 @@ namespace TP1._2_CSharp_10_12_19
 
         public void SeDecrire()
         {
-            Console.WriteLine("Le robot se trouve: ");
-            seTrouveDans.SeDecrire();
+            Console.Write("The robot is located in: ");
+            Console.WriteLine(seTrouveDans.nom);
+            Console.WriteLine("Has in its bag: ");
+            this.DecrireMateriel();
         }
 
     }

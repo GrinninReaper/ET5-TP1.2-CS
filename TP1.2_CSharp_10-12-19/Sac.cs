@@ -18,11 +18,16 @@ namespace TP1._2_CSharp_10_12_19
 
         public void SeDecrire()
         {
-            Console.WriteLine("Description du sac");
-            foreach (Materiel obj in contenue)
+            if (contenue.Count == 0)
+                Console.WriteLine("nothing");
+            else
             {
-                obj.SeDecrire();
+                foreach (Materiel obj in contenue)
+                {
+                    obj.SeDecrire();
+                }
             }
+            
         }
 
         public void Add(Materiel m)

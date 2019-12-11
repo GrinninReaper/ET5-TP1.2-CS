@@ -10,18 +10,20 @@ namespace TP1._2_CSharp_10_12_19
     class Salle: Descriptible
     {
 
-        private String nom;
-        private ArrayList issue;
+        public String nom;
+        public ArrayList issueList;
         private ArrayList possede;
 
-        public Salle(String n)
+        public Salle(String n, ArrayList issues, ArrayList possession)
         {
             nom = n;
+            issueList = new ArrayList();
+            possede = possession;
         }
 
         private void DecrireIssues()
         {
-            foreach(Issue i in issue)
+            foreach(Issue i in issueList)
             {
                 i.SeDecrire();
             }
@@ -47,13 +49,17 @@ namespace TP1._2_CSharp_10_12_19
         public void SeDecrire()
         {
             Console.WriteLine();
-            Console.WriteLine("Description d'une salle:");
+            Console.WriteLine("Description of a room:");
             Console.WriteLine(" Nom: " + nom);
-            Console.WriteLine("Description des issues:");
+            Console.WriteLine("");
+            Console.WriteLine("Description of the room's issue:");
             DecrireIssues();
-            Console.WriteLine("Description matériel:");
-            DecrireMateriel();
-
+            Console.WriteLine("");
+            Console.WriteLine("The room has:");
+            if (possede.Count == 0)
+                Console.WriteLine("Nothing in it");
+            else
+                DecrireMateriel();
         }
 
         private void ViderMateriel()

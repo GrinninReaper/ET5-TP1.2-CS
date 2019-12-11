@@ -11,7 +11,7 @@ namespace TP1._2_CSharp_10_12_19
 
         public virtual void SeDecrire()
         {
-            Console.WriteLine("Description d'un matériel quelconque");
+            Console.WriteLine("An unkown materiel");
         }
 
     }

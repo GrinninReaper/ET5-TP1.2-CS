@@ -20,8 +20,8 @@ namespace TP1._2_CSharp_10_12_19
 
         public override void SeDecrire()
         {
-            Console.WriteLine("Description d'une chaise:");
-            Console.WriteLine(" couleur:{0} & nbPieds:{1}", couleur, nbPieds);
+            Console.WriteLine("A chair:");
+            Console.WriteLine(" color:{0} & number of legs:{1}", couleur, nbPieds);
         }
     }
 }

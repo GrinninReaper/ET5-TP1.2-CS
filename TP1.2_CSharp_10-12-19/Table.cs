@@ -21,8 +21,8 @@ namespace TP1._2_CSharp_10_12_19
 
         public override void SeDecrire()
         {
-            Console.WriteLine("Description d'une table:");
-            Console.WriteLine(" dimension:{0} x {1}", longueur, largeur);
+            Console.WriteLine("A table:");
+            Console.WriteLine(" dimensions:{0} x {1}", longueur, largeur);
         }
     }
 }
